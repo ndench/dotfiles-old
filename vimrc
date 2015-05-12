@@ -1,14 +1,17 @@
 set nocompatible                " get rid of vi compatibility
 filetype off                    " filetype interferes with vundle
 
-set rtp+=~/.vim/bundle/vundle/  " add vundle to vim runtime
-call vundle#rc()                " initialise vundle
+set rtp+=~/.vim/bundle/vundle/     " add vundle to vim runtime
+call vundle#begin()                " initialise vundle
 
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
 Plugin 'gmarik/vundle'
 
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
 
@@ -145,7 +148,21 @@ nnoremap Y y$
 autocmd BufNewFIle,BufRead *.md set syntax=markdown
 
 " Open NERDTree
-"nmap <leader>nt :NERDTree<CR>
+nmap <leader>nt :NERDTree<CR>
 
 " Save on focus lost ignoring errors
 au FocusLost * silent! wa
+
+" change the leader from \ to ,
+let mapleader=","
+
+" quickly edit/reload the vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>so :so $MYVIMRC<CR>
+
+set title           " change the terminal's title
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many undos
+
+" semicolon is easier that colon
+nnoremap ; :

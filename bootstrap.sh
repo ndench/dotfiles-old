@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc tmux.conf"           # list of files/folders to symlink in homedir
+files="vim vimrc tmux.conf"           # list of files/folders to symlink in homedir
 
 ##########
 
@@ -28,3 +28,5 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+vim :PluginInstall +qall
