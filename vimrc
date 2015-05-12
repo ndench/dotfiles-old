@@ -166,3 +166,5 @@ set undolevels=1000 " use many undos
 
 " semicolon is easier that colon
 nnoremap ; :
+
+set pastetoggle=<F2> " F2 disables autoindent
