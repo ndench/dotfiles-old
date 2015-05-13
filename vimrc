@@ -168,3 +168,6 @@ set undolevels=1000 " use many undos
 nnoremap ; :
 
 set pastetoggle=<F2> " F2 disables autoindent
+
+" For when you forget to sudo...
+cmap w!! w !sudo tee % >/dev/null
