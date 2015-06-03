@@ -1,6 +1,10 @@
 set nocompatible                " get rid of vi compatibility
 filetype off                    " filetype interferes with vundle
 
+" change the leader from \ to ,
+let mapleader =  ","
+
+
 set rtp+=~/.vim/bundle/vundle/     " add vundle to vim runtime
 call vundle#begin()                " initialise vundle
 
@@ -152,9 +156,6 @@ nmap <leader>nt :NERDTree<CR>
 
 " Save on focus lost ignoring errors
 au FocusLost * silent! wa
-
-" change the leader from \ to ,
-let mapleader=","
 
 " quickly edit/reload the vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
