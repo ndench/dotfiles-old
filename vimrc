@@ -1,9 +1,8 @@
-set nocompatible                " get rid of vi compatibility
-filetype off                    " filetype interferes with vundle
-
 " change the leader from \ to ,
 let mapleader =  ","
 
+set nocompatible                " get rid of vi compatibility
+filetype off                    " filetype interferes with vundle
 
 set rtp+=~/.vim/bundle/vundle/     " add vundle to vim runtime
 call vundle#begin()                " initialise vundle
@@ -27,6 +26,7 @@ set ruler	    " show the cursor position all the time
 set showcmd	    " display incomplete commands
 set incsearch   " do incremental searching
 set autoindent  " always set autoindenting on
+set cindent     " c indentation
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -112,8 +112,9 @@ nmap $ g$
 nmap 0 g0
 nmap ^ g^
 
-set number      " show line numbers
-set cursorline  " highlight line the cursor is on
+set relativenumber  " show line numbers relative to current line
+set number          " show the line number we're currently on
+set cursorline      " highlight line the cursor is on
 
 " Popup menu for autocompleting commands
 if has("wildmenu")
@@ -159,6 +160,7 @@ au FocusLost * silent! wa
 
 " quickly edit/reload the vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :w<CR>:so $MYVIMRC<CR>
 nmap <silent> <leader>so :so $MYVIMRC<CR>
 
 set title           " change the terminal's title
@@ -171,4 +173,9 @@ nnoremap ; :
 set pastetoggle=<F2> " F2 disables autoindent
 
 " For when you forget to sudo...
-cmap w!! w !sudo tee % >/dev/null
+cmap w!! silent w !sudo tee % >/dev/null
+
+" clear serch highling
+nmap <silent> ,/ :nohlsearch<CR>
+
+set directory=$HOME/.vim/swapfiles//
