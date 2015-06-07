@@ -30,7 +30,11 @@ for file in $files; do
 done
 
 # Clone in vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+VUNDLE_LOCATION="~/.vim/bundle/Vundle.vim"
+if [ ! "$(ls -A $VUNDLE_LOCATION)" ]
+then
+    git clone https://github.com/gmarik/Vundle.vim.git $VUNDLE_LOCAITON
+fi
 
 # Install bundles
 vim +PluginInstall +qall

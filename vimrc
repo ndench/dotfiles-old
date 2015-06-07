@@ -4,13 +4,13 @@ let mapleader =  ","
 set nocompatible                " get rid of vi compatibility
 filetype off                    " filetype interferes with vundle
 
-set rtp+=~/.vim/bundle/Vundle.vim/ " add vundle to vim runtime
+set rtp+=~/.vim/bundle/Vundle.vim  " add vundle to vim runtime
 call vundle#begin()                " initialise vundle
 
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 
