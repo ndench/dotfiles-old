@@ -4,7 +4,7 @@ let mapleader =  ","
 set nocompatible                " get rid of vi compatibility
 filetype off                    " filetype interferes with vundle
 
-set rtp+=~/.vim/bundle/vundle/     " add vundle to vim runtime
+set rtp+=~/.vim/bundle/Vundle.vim/ " add vundle to vim runtime
 call vundle#begin()                " initialise vundle
 
 " This is the Vundle package, which can be found on GitHub.
