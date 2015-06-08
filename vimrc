@@ -19,7 +19,14 @@ call vundle#begin()                " initialise vundle
 " 'user/repository' format
 Plugin 'gmarik/Vundle.vim'
 
+" A file system explorer
 Plugin 'scrooloose/nerdtree'
+
+" Runs external syntax checkers on code
+Plugin 'scrooloose/syntastic'
+
+" A fuzzy file finder
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
@@ -37,23 +44,26 @@ nmap <leader>nt :NERDTree<CR>
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set incsearch        " do incremental searching
-set autoindent       " always set autoindenting on
-set hidden           " handle hidden files better
-set confirm          " display confirmation for unsaved changes
-set scrolloff=10     " give the cursor lines at the top and bottom
-set ignorecase       " ignore case when searching
-set smartcase        " case sensitive seacrh if capital letter used
-set history=1000     " remember more commands and search history
-set undolevels=1000  " use many undos
-set tabstop=4        " number of visual spaces per TAB
-set softtabstop=4    " number of spaces in TAB when editing
-set shiftwidth=4     " number of spaces for reindenting (<<, >>)
-set expandtab        " use spaces not tabs
-set splitbelow       " open splits to bottom
-set splitright       " open vsplits to right
-set modelines=1      " Check the final line for a modeline
-set pastetoggle=<F2> " F2 disables autoindent
+set incsearch         " do incremental searching
+set autoindent        " always set autoindenting on
+set hidden            " handle hidden files better
+set confirm           " display confirmation for unsaved changes
+set scrolloff=10      " give the cursor lines at the top and bottom
+set ignorecase        " ignore case when searching
+set smartcase         " case sensitive seacrh if capital letter used
+set history=1000      " remember more commands and search history
+set undolevels=1000   " use many undos
+set tabstop=4         " number of visual spaces per TAB
+set softtabstop=4     " number of spaces in TAB when editing
+set shiftwidth=4      " number of spaces for reindenting (<<, >>)
+set expandtab         " use spaces not tabs
+set splitbelow        " open splits to bottom
+set splitright        " open vsplits to right
+set modelines=1       " Check the final line for a modeline
+set pastetoggle=<F2>  " F2 disables autoindent
+set lazyredraw        " redraw only when we need to
+set foldenable        " enable folding
+set foldmethod=indent " fold based on indent level
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -199,10 +209,10 @@ endfunction
 
 " Auto Commands {{{{
 
-" Markdown filetype
+" markdown filetype
 autocmd BufNewFIle,BufRead *.md set syntax=markdown
 
-" Save on focus lost ignoring errors
+" save on focus lost ignoring errors
 au FocusLost * silent! wa
 
 " return to last edit position when opening files
@@ -210,6 +220,13 @@ autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
+
+" if vim is opened on a directory, auto open NERDTree
+if isdirectory(argv(0))
+    bd 
+    autocmd VimEnter * exe "cd" argv(0)
+    autocmd VimEnter * NERDTree
+endif
 
 
 " }}}}
