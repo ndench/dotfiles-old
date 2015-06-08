@@ -28,6 +28,9 @@ Plugin 'scrooloose/syntastic'
 " A fuzzy file finder
 Plugin 'kien/ctrlp.vim'
 
+" Solarized colorscheme
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
@@ -98,6 +101,14 @@ if has("gui_running")
     set guioptions-=L
     set guitablabel=%N:%M\ %t
 endif
+
+" }}}}
+
+" Colors {{{{
+
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " }}}}
 
