@@ -15,5 +15,6 @@ fi
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
 then
+    # background color for terminal: #1C1C1C
     source ~/.zshrc.local
 fi
