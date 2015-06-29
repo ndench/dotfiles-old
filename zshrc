@@ -12,6 +12,11 @@ fi
 
 # Customize to your needs...
 
+# If a pattern for filename generation doesn't match
+# pass it onto the command. Allows HEAD^ to work as
+# expected.
+setopt NO_NOMATCH
+
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
 then
