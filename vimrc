@@ -31,6 +31,9 @@ Plugin 'kien/ctrlp.vim'
 " Solarized colorscheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Line up text
+Plugin 'godlygeek/tabular'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
@@ -65,8 +68,8 @@ set splitright        " open vsplits to right
 set modelines=1       " Check the final line for a modeline
 set pastetoggle=<F2>  " F2 disables autoindent
 set lazyredraw        " redraw only when we need to
-set foldenable        " enable folding
-set foldmethod=indent " fold based on indent level
+"set foldenable        " enable folding
+"set foldmethod=indent " fold based on indent level
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -123,6 +126,7 @@ nnoremap Y y$
 
 " semicolon is easier that colon
 nnoremap ; :
+vnoremap ; :
 
 " For when you forget to sudo...
 cmap w!! silent w !sudo tee % >/dev/null
