@@ -9,6 +9,7 @@ keepass2
 xdotool
 chrome
 dropbox
+tree
 
 
 Things to do
