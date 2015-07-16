@@ -17,6 +17,11 @@ fi
 # expected.
 setopt NO_NOMATCH
 
+# Set 256 colors
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
 then
