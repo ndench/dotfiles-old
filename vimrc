@@ -9,6 +9,8 @@ let mapleader =  ","
 
 " Plugin Setup {{{{
 
+" Install Plugins {{{{
+
 filetype off                    " filetype interferes with vundle
 
 set rtp+=~/.vim/bundle/Vundle.vim  " add vundle to vim runtime
@@ -31,18 +33,42 @@ Plugin 'kien/ctrlp.vim'
 " Solarized colorscheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Distinguished colorscheme
+Plugin 'Lokaltog/vim-distinguished'
+
 " Line up text
 Plugin 'godlygeek/tabular'
+
+" Javascript syntax
+Plugin 'jelera/vim-javascript-syntax'
+
+" Better Javascript indenting and highlighting
+Plugin 'pangloss/vim-javascript'
+
+" Show indent guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Add closing quote/bracket
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
 " }}}}
 
-" NERDTree {{{{
+" NERDTree Setup {{{{
 
 " Open NERDTree
 nmap <leader>nt :NERDTree<CR>
+
+" }}}}
+
+" Syntastic Setup {{{{
+
+" Run syntastic on file open, as well as on save
+let g:syntastic_check_on_open=1
+
+" }}}}
 
 " }}}}
 
