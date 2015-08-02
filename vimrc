@@ -36,6 +36,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Distinguished colorscheme
 Plugin 'Lokaltog/vim-distinguished'
 
+" Seoul256 colorscheme
+Plugin 'junegunn/seoul256.vim'
+
 " Line up text
 Plugin 'godlygeek/tabular'
 
@@ -135,9 +138,9 @@ endif
 
 " Colors {{{{
 
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 set background=dark
-silent! colorscheme solarized
+silent! colorscheme seoul256
 
 " }}}}
 
