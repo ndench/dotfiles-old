@@ -28,5 +28,3 @@ then
     # background color for terminal: #1C1C1C
     source ~/.zshrc.local
 fi
-
-export TERM=xterm-256color
