@@ -6,4 +6,4 @@ dotfiles=$HOME/dotfiles           # dotfiles directory
 vundle_location="$dotfiles/vim/bundle/Vundle.vim"
 
 # list of files/folders to symlink in homedir
-files="vim vimrc tmux.conf zpreztorc zshrc zprofile"
+files="vim vimrc tmux.conf zpreztorc zshrc zprofile xmodmaprc"
