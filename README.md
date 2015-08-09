@@ -1,15 +1,7 @@
 Things to install
 =================
 
-git
-zsh
-vim
-tmux
-keepass2
-xdotool
-chrome
-dropbox
-tree
+sudo apt-get install git zsh vim tmux keepass2 xdotool tree
 
 
 Things to do
