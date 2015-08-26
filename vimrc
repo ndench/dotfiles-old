@@ -140,7 +140,7 @@ endif
 
 "let g:solarized_termcolors=256
 set background=dark
-silent! colorscheme seoul256
+silent! colorscheme solarized
 
 " }}}}
 
