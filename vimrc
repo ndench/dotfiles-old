@@ -27,6 +27,9 @@ Plugin 'scrooloose/nerdtree'
 " Runs external syntax checkers on code
 Plugin 'scrooloose/syntastic'
 
+" Orgasmic commenting
+Plugin 'scrooloose/nerdcommenter'
+
 " A fuzzy file finder
 Plugin 'kien/ctrlp.vim'
 
@@ -54,6 +57,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 " Add closing quote/bracket
 Plugin 'Raimondi/delimitMate'
 
+" quoting/parenthesizing made simple
+Plugin 'tpope/vim-surround'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
@@ -63,6 +69,15 @@ filetype plugin indent on       " turn filetype, plugin and indent on
 
 " Open NERDTree
 nmap <leader>nt :NERDTree<CR>
+
+" }}}}
+
+" NERDCommenter Setup {{{{
+
+" Run syntastic on file open, as well as on save
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+let delimitMate_jump_expansion = 1
 
 " }}}}
 
