@@ -179,6 +179,8 @@ cmap w!! silent w !sudo tee % >/dev/null
 nmap <S-Enter> <S-O><Esc>
 nmap <CR> o<Esc>
 
+nnoremap Q <nop>
+
 " }}}}
 
 " Leader Shortcuts {{{{
