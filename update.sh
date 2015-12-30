@@ -12,6 +12,8 @@ for file in $files; do
     fi
 done
 
-# Install/Update bundles
-echo "Installing/updating vim plugins"
-vim +PluginInstall! +qall
+if [ "$1" == "--vim" ]; then
+    # Install/Update bundles
+    echo "Installing/updating vim plugins"
+    vim +PluginInstall! +qall
+fi
