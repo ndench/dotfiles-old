@@ -60,6 +60,9 @@ Plugin 'Raimondi/delimitMate'
 " quoting/parenthesizing made simple
 Plugin 'tpope/vim-surround'
 
+" vim-go
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
