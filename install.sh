@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install Prezto
+zsh prezto.sh
+
 # Include config variables
 source config.sh
 
@@ -22,4 +25,4 @@ then
     git clone https://github.com/gmarik/Vundle.vim.git $vundle_location
 fi
 
-source update.sh
+source update.sh --vim
