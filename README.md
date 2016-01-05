@@ -1,7 +1,7 @@
 Things to install
 =================
 
-sudo apt-get install git zsh vim tmux keepass2 xdotool tree
+git zsh vim tmux tree golang
 
 
 Things to do
