@@ -18,7 +18,7 @@ client.urgent           #C10004 #900000 #ffffff #900000
 font pango: Ubunto Mono 10
 exec --no-startup-id feh --bg-fill /home/nathan/Pictures/wallpapers/dark_green_abstract.jpg
 
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 
 set $mod Mod4
