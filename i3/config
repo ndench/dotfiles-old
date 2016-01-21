@@ -23,9 +23,9 @@ exec --no-startup-id dropbox start
 # Select an area
 bindsym --release Control+Print exec scrot -s $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
 # Take the focused window
-bindsym Print exec scrot -u $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
+#bindsym Print exec scrot -u $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
 # Take the focused window aftef 5 seconds
-bindsym --release Control+Shift+Print -ud 5 $HOME/Pictures/screenshots/test.png
+#bindsym --release Control+Shift+Print exec scrot -ud 5 $HOME/Pictures/screenshots/test.png
 
 
 # Don't change focus when mouse moves
