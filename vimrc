@@ -63,6 +63,9 @@ Plugin 'tpope/vim-surround'
 " vim-go
 Plugin 'fatih/vim-go'
 
+" Time tracking
+Plugin 'wakatime/vim-wakatime'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
