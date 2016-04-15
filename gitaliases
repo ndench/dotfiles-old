@@ -1,0 +1,16 @@
+[alias]
+    pl = pull --rebase --prune
+    pu = push
+    pub = push -u origin !$
+    co = checkout
+    cob = checkout -b
+    br = branch
+    ci = commit
+    cm = commit -m
+    ca = commit --amend
+    can = commit --amend --no-edit
+    a = add
+    d = diff
+    s = status -sb
+    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
