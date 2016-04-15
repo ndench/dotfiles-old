@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [ -s ~/.Xmodmap ]; then
+if [ -r ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 

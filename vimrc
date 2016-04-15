@@ -66,6 +66,9 @@ Plugin 'fatih/vim-go'
 " Time tracking
 Plugin 'wakatime/vim-wakatime'
 
+" Scala
+Plugin 'derekwyatt/vim-scala'
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
@@ -78,12 +81,11 @@ nmap <leader>nt :NERDTree<CR>
 
 " }}}}
 
-" NERDCommenter Setup {{{{
+" delimitMate Setup {{{{
 
-" Run syntastic on file open, as well as on save
+" Expand both spaces and carriage returns when inside delimiters
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
-let delimitMate_jump_expansion = 1
 
 " }}}}
 
