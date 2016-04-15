@@ -4,5 +4,5 @@ if [ -r ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 
-exec i3
+#exec i3
 
