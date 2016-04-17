@@ -12,6 +12,9 @@ for file in $files; do
     fi
 done
 
+# Include git config
+git config --global include.path '~/.gitinclude'
+
 if [ "$1" == "--vim" ]; then
     # Install/Update bundles
     echo "Installing/updating vim plugins"
