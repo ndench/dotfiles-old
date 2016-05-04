@@ -16,7 +16,7 @@ client.unfocused        #333333 #424242 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 font pango: Ubunto Mono 10
-exec --no-startup-id feh --bg-fill /home/nathan/Pictures/wallpapers/dark_green_abstract.jpg
+exec --no-startup-id feh --bg-fill /home/nathan/Pictures/black_light_dark_figures.jpg
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 
@@ -32,8 +32,8 @@ bindsym --release Control+Print exec scrot -s $HOME/Pictures/screenshots/%Y-%m-%
 # Don't change focus when mouse moves
 focus_follows_mouse no
 
-# Don't move the mouse to the other monitor when changing workspace
-mouse_warping none
+# Whether or not to warp the mouse to another output when we move
+mouse_warping output #none
 
 set $mod Mod4
 set $left h
