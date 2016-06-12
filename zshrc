@@ -39,3 +39,4 @@ then
 fi
 
 export PATH=$PATH:~/bin
+fpath=(~/.zsh/completion $fpath)

@@ -69,6 +69,10 @@ Plugin 'wakatime/vim-wakatime'
 " Scala
 Plugin 'derekwyatt/vim-scala'
 
+" Markdown
+Plugin 'plasticboy/vim-markdown'
+
+
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
 
