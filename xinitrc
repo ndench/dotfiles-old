@@ -1,8 +1,14 @@
 #! /bin/bash
 
-#if [ -r ~/.Xmodmap ]; then
-#    xmodmap ~/.Xmodmap
-#fi
+if [ -r ~/.Xkbmap ]; then
+    setxkbmap `cat ~/.Xkbmap`
+fi
 
-exec i3
+if [ -r ~/.Xresources ]; then
+  xrdb ~/.Xresources
+fi
+
+exec i3 --shmlog-size=26214400
+
+
 
