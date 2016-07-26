@@ -16,17 +16,29 @@ client.unfocused        #333333 #424242 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 font pango: Ubunto Mono 10
-exec --no-startup-id feh --bg-fill /home/nathan/Pictures/black_light_dark_figures.jpg
-exec --no-startup-id dropbox start
-exec --no-startup-id nm-applet
+#exec --no-startup-id feh --bg-fill /home/nathan/Pictures/black_light_dark_figures.jpg
+#exec --no-startup-id dropbox start
+#exec --no-startup-id nm-applet
+
+# Disable touchpad
+exec --no-startup-id synclient TouchpadOff=1
+
+# Middle mouse scroll with trackpoint
+exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 
 # Turn on screenshots
 # Select an area
-bindsym --release Control+Print exec scrot -s $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
+bindsym --release Control+Print exec scrot -s $HOME/screenshots/%Y-%m-%d_%H-%M-%S.png
 # Take the focused window
-#bindsym Print exec scrot -u $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
+bindsym Print exec scrot -u $HOME/screenshots/%Y-%m-%d_%H-%M-%S.png
 # Take the focused window aftef 5 seconds
-bindsym --release Control+Shift+Print exec scrot -ud 1 $HOME/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png
+bindsym --release Control+Shift+Print exec scrot -ud 1 $HOME/screenshots/%Y-%m-%d_%H-%M-%S.png
+
+# disable touchpad
+# exec --no-startup-id synclient TouchpadOff=1`
 
 # Toms config
 # Print screen errythang
