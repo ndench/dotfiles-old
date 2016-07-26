@@ -20,5 +20,5 @@ if [ "$1" == "--vim" ]; then
     echo "Installing/updating vim plugins"
     vim +PluginInstall! +qall
 
-    vim +GoInstallBinaries +qall
+    #vim +GoInstallBinaries +qall
 fi

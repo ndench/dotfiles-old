@@ -38,5 +38,6 @@ then
     source ~/.zshrc.local
 fi
 
+export EDITOR=vim
 export PATH=$PATH:~/bin
 fpath=(~/.zsh/completion $fpath)

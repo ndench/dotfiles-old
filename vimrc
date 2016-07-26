@@ -72,6 +72,8 @@ Plugin 'derekwyatt/vim-scala'
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 
+" Navigate tmux and vim splits with ctrl+hjkl
+Bundle 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
