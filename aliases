@@ -1,0 +1,4 @@
+alias vsh='vagrant ssh'
+alias vup='vagrant up'
+alias valt='vagrant halt'
+alias clip='xclip -in -selection clipboard'

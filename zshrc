@@ -27,15 +27,19 @@ setopt NO_NOMATCH
 unsetopt BRACE_CCL
 
 # Set 256 colors
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-    export TERM=xterm-256color
-fi
+export TERM=xterm-256color
 
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
 then
     # background color for terminal: #1C1C1C
     source ~/.zshrc.local
+fi
+
+# Import Aliases
+if [ -r ~/.aliases ]
+then
+    source ~/.aliases
 fi
 
 export EDITOR=vim
