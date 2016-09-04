@@ -16,7 +16,7 @@ client.unfocused        #333333 #424242 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
 
 font pango: Ubunto Mono 10
-#exec --no-startup-id feh --bg-fill /home/nathan/Pictures/black_light_dark_figures.jpg
+exec --no-startup-id feh --randomize --bg-fill $HOME/wallpapers/*
 #exec --no-startup-id dropbox start
 #exec --no-startup-id nm-applet
 
@@ -36,9 +36,6 @@ bindsym --release Control+Print exec scrot -s $HOME/screenshots/%Y-%m-%d_%H-%M-%
 bindsym Print exec scrot -u $HOME/screenshots/%Y-%m-%d_%H-%M-%S.png
 # Take the focused window aftef 5 seconds
 bindsym --release Control+Shift+Print exec scrot -ud 1 $HOME/screenshots/%Y-%m-%d_%H-%M-%S.png
-
-# disable touchpad
-# exec --no-startup-id synclient TouchpadOff=1`
 
 # Toms config
 # Print screen errythang
@@ -78,7 +75,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+w kill 
@@ -122,8 +119,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+o layout stacking
+# change container layout (tabbed, toggle split)
 bindsym $mod+comma layout tabbed
 bindsym $mod+period layout toggle split
 
@@ -182,7 +178,7 @@ bindsym $mod+Control+Shift+r restart
 bindsym $mod+Control+Shift+e exec i3-msg exit
 #bindsym $mod+Shift+e exec i3exit logout, mode "default"
 # lock the screen
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+Control+l exec i3lock --nofork --ignore-empty-password --image=$HOME/wallpapers/earth_burn_digits.jpg
 
 # Media keys
 
