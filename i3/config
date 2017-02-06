@@ -20,6 +20,9 @@ exec --no-startup-id feh --randomize --bg-fill $HOME/wallpapers/*
 #exec --no-startup-id dropbox start
 #exec --no-startup-id nm-applet
 
+# Turn on screensavers
+exec --no-startup-id xscreensaver
+
 # Disable touchpad
 exec --no-startup-id synclient TouchpadOff=1
 
@@ -178,7 +181,10 @@ bindsym $mod+Control+Shift+r restart
 bindsym $mod+Control+Shift+e exec i3-msg exit
 #bindsym $mod+Shift+e exec i3exit logout, mode "default"
 # lock the screen
-bindsym $mod+Control+l exec i3lock --nofork --ignore-empty-password --image=$HOME/wallpapers/earth_burn_digits.jpg
+#bindsym $mod+Control+l exec i3lock --nofork --ignore-empty-password --show-failed-attempts --image=/home/nathan/wallpapers/earth_burn_digits.jpg
+#bindsym $mod+Control+l exec /home/nathan/bin/christmas/lock.sh
+#bindsym $mod+Control+l exec i3lock-fancy --greyscale
+bindsym $mod+Control+l exec xscreensaver-command --lock
 
 # Media keys
 

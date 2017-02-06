@@ -45,3 +45,7 @@ fi
 export EDITOR=vim
 export PATH=$PATH:~/bin
 fpath=(~/.zsh/completion $fpath)
+
+
+# Learn about a random man page
+whatis `ls /usr/share/man/man{1,4,5,6,7,8} | shuf -n 1 | cut -d . -f 1`

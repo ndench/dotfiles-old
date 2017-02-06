@@ -8,7 +8,9 @@ if [ -r ~/.Xresources ]; then
   xrdb ~/.Xresources
 fi
 
-exec i3 --shmlog-size=26214400
+export $(gnome-keyring-daemon --start)
+
+exec i3-with-shmlog
 
 
 

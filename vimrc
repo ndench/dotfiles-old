@@ -60,6 +60,9 @@ Plugin 'Raimondi/delimitMate'
 " quoting/parenthesizing made simple
 Plugin 'tpope/vim-surround'
 
+" allow plugins to use '.' command
+Plugin 'tpope/vim-repeat'
+
 " vim-go
 Plugin 'fatih/vim-go'
 
@@ -74,6 +77,9 @@ Plugin 'plasticboy/vim-markdown'
 
 " Navigate tmux and vim splits with ctrl+hjkl
 Bundle 'christoomey/vim-tmux-navigator'
+
+" Additional syntax highligiting for ansible yaml
+Bundle 'chase/vim-ansible-yaml'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
