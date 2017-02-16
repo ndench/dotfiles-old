@@ -1,13 +1,14 @@
 [user]
 	email = ndenc2@gmail.com
 	name = Nathan Dench
+[push]
+	default = current
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFXGJ --pattern '^(Date|added|deleted|modified): '
 [alias]
     pl = pull --prune
     plr = pull --rebase --prune
     pu = push
-    pub = push -u origin !$
     co = checkout
     cob = checkout -b
     br = branch
@@ -16,7 +17,8 @@
     ca = commit --amend
     can = commit --amend --no-edit
     a = add
-    d = diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+    dw = diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+    d = diff
     s = status -sb
     l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
