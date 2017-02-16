@@ -1,8 +1,11 @@
 [user]
 	email = ndenc2@gmail.com
 	name = Nathan Dench
+[core]
+    pager = diff-so-fancy | less --tabs=4 -RFXGJ --pattern '^(Date|added|deleted|modified): '
 [alias]
-    pl = pull --rebase --prune
+    pl = pull --prune
+    plr = pull --rebase --prune
     pu = push
     pub = push -u origin !$
     co = checkout
@@ -27,5 +30,10 @@
   interactive = auto
   ui = true
   pager = true
-[include]
-	path = ~/.gitinclude
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
