@@ -16,7 +16,7 @@ PERCENT=`echo $(( $REM * 100 / $FULL ))`
 MESSAGE="AWW SNAP! I am running out of juice ...  Please, charge me or I'll have to power down."
 
 # set energy limit in percent
-LIMIT="15"
+LIMIT="10"
 
 # set limit and show warning
 if [ $PERCENT -le "$(echo $LIMIT)" ]; then
