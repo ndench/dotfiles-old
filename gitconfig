@@ -20,9 +20,10 @@
     wd = diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
     d = diff
     s = status -sb
-    l = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate
+    l = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
-    lb = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate master..
+    lb = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate master..
+    lp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod71..master | sort | column -s* -t
 [diff]
 	compactionHeuristic = true
 [color]
