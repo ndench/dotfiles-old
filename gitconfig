@@ -23,9 +23,17 @@
     l = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
     lb = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate master..
-    lp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod71..master | sort | column -s* -t
+    #lp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort | column -s* -t
+    lpp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort
+    lp = ! git log --pretty=format:"[%an]*\\ %s" --decorate prod..master | sort | column -s* -t
+
 [diff]
 	compactionHeuristic = true
+    tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
 [color]
   diff = auto
   status = auto
@@ -40,3 +48,5 @@
   old = red
   new = green
   whitespace = red reverse
+[include]
+	path = ~/.gitinclude

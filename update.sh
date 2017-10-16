@@ -19,6 +19,4 @@ if [ "$1" == "--vim" ]; then
     # Install/Update bundles
     echo "Installing/updating vim plugins"
     vim +PluginInstall! +qall
-
-    #vim +GoInstallBinaries +qall
 fi

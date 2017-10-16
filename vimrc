@@ -63,26 +63,51 @@ Plugin 'tpope/vim-surround'
 " allow plugins to use '.' command
 Plugin 'tpope/vim-repeat'
 
-" vim-go
-Plugin 'fatih/vim-go'
-
 " Time tracking
 Plugin 'wakatime/vim-wakatime'
-
-" Scala
-Plugin 'derekwyatt/vim-scala'
 
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 
 " Navigate tmux and vim splits with ctrl+hjkl
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Additional syntax highligiting for ansible yaml
-Bundle 'chase/vim-ansible-yaml'
+Plugin 'chase/vim-ansible-yaml'
+
+" Nginx sytax
+Plugin 'chr4/nginx.vim'
+
+" PHP syntax
+Plugin 'StanAngeloff/php.vim'
+
+" Better omnicompletion for ph
+Plugin 'shawncplus/phpcomplete.vim'
+
+" Use <Tab> for omnicompletion
+"Plugin 'ervandew/supertab'
+
+" PHP qa tools, phpcs, phpmd, phpunit
+"Plugin 'joonty/vim-phpqa'
+
+" Vim debugger
+Plugin 'joonty/vdebug'
+
+" Symfony
+Plugin 'docteurklein/vim-symfony'
+
+" Onedark colorscheme
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
+
+" }}}}
+
+" Vundle Setup {{{{
+
+" Use ssh instead of https
+let g:vundle_default_git_proto = 'git'
 
 " }}}}
 
@@ -105,6 +130,18 @@ let g:delimitMate_expand_space = 1
 
 " Run syntastic on file open, as well as on save
 let g:syntastic_check_on_open=1
+
+" }}}}
+
+" Vdebug Setup {{{{
+
+" Ensure vdebug_options is set
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+
+" Don't break at first line
+let g:vdebug_options["break_on_open"] = 0
 
 " }}}}
 
@@ -169,13 +206,23 @@ if has("gui_running")
     set guitablabel=%N:%M\ %t
 endif
 
+" highlight strings inside of comments
+let c_comment_strings=1
+
+" show trailing whitespace
+let c_space_errors=1
+
 " }}}}
 
 " Colors {{{{
 
 "let g:solarized_termcolors=256
 set background=dark
-silent! colorscheme solarized
+silent! colorscheme onedark
+
+set termguicolors   " true color
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " }}}}
 
@@ -199,6 +246,7 @@ cmap w!! silent w !sudo tee % >/dev/null
 nmap <S-Enter> <S-O><Esc>
 nmap <CR> o<Esc>
 
+" Don't use Ex mode, use Q for formatting
 nnoremap Q <nop>
 
 " }}}}
@@ -307,6 +355,14 @@ if isdirectory(argv(0))
     bd 
     autocmd VimEnter * exe "cd" argv(0)
     autocmd VimEnter * NERDTree
+endif
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis
+                 \ | wincmd p | diffthis
 endif
 
 

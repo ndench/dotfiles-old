@@ -27,7 +27,7 @@ setopt NO_NOMATCH
 unsetopt BRACE_CCL
 
 # Set 256 colors
-export TERM=xterm-256color
+export TERM=st-256color
 
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
@@ -43,9 +43,12 @@ then
 fi
 
 export EDITOR=vim
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/.gem/ruby/2.4.0/bin:~/go/bin
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 fpath=(~/.zsh/completion $fpath)
 
 
 # Learn about a random man page
-whatis `ls /usr/share/man/man{1,4,5,6,7,8} | shuf -n 1 | cut -d . -f 1`
+#whatis `ls /usr/share/man/man{1,4,5,6,7,8} | shuf -n 1 | cut -d . -f 1`
+
+exec fish
