@@ -1,0 +1,3 @@
+#! /bin/bash
+setxkbmap  `cat ~/.Xkbmap`
+#-layout us,us -variant dvorak, 

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+xinput --set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Speed' 1
+xinput --set-prop 11 'libinput Accel Speed' 1
+xinput --set-prop 12 'libinput Accel Speed' 1
+xinput --set-prop 18 'libinput Accel Speed' 1
+

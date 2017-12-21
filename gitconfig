@@ -1,8 +1,8 @@
 [user]
-	email = ndenc2@gmail.com
-	name = Nathan Dench
+    email = ndenc2@gmail.com
+    name = Nathan Dench
 [push]
-	default = current
+    default = upstream
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFXGJ
 [alias]
@@ -23,30 +23,29 @@
     l = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
     lb = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate master..
+    lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
     #lp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort | column -s* -t
     lpp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort
     lp = ! git log --pretty=format:"[%an]*\\ %s" --decorate prod..master | sort | column -s* -t
 
 [diff]
-	compactionHeuristic = true
+    compactionHeuristic = true
     tool = icdiff
 [difftool]
-  prompt = false
+    prompt = false
 [difftool "icdiff"]
-  cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
+    cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
 [color "diff"]
-  commit = green
-  meta = yellow
-  frag = cyan
-  old = red
-  new = green
-  whitespace = red reverse
-[include]
-	path = ~/.gitinclude
+    commit = green
+    meta = yellow
+    frag = cyan
+    old = red
+    new = green
+    whitespace = red reverse
