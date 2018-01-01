@@ -186,7 +186,6 @@ bar {
     }
 }
 
-
 # set the background
 exec_always --no-startup-id feh --randomize --bg-fill $HOME/dotfiles/wallpapers/*
 

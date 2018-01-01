@@ -46,3 +46,9 @@ compton
 arc-gtk-theme
 arc-icon-theme
 pavucontrol
+vagrant
+virtualbox-host-modules-arch
+virtualbox
+virtuolbox-guest-utils
+nfs-utils
+ansible
