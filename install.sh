@@ -28,15 +28,13 @@ function moveFiles {
 source vars.sh
 
 date=$(date +%Y%m%d_%H%M%S)
-olddir=$HOME/dotfiles_old/$date   # old dotfiles backup directory
+olddir=$dotfiles/dotfiles_old/$date   # old dotfiles backup directory
 
 # create backup directory for old dotfiles
 echo "Creating $olddir for backup of any existing dotfiles"
 mkdir -p $olddir
 
 # move any existing dotfiles in $HOME and $HOME/.config to dotfiles_old directory
-date=$(date +%Y%m%d_%H%M%S)
-olddir=$HOME/dotfiles_old/$date   # old dotfiles backup directory
 moveFiles $home_dotfiles $HOME $olddir true
 moveFiles $config_dotfiles $HOME/.config $olddir false
 

@@ -1,0 +1,15 @@
+rofi.modi: drun
+rofi.lines: 3
+rofi.hide-scrollbar: true
+rofi.eh: 2
+rofi.width: 100
+rofi.padding: 700
+rofi.bw: 0
+rofi.font: System San Francisco Display 18
+rofi.display-drun:
+rofi.separator-style: none
+
+rofi.color-window: argb:85475263
+
+! State:           'bg',          'fg',    'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal: argb:00000000, #f3f4f5, argb:00000000, argb:00000000, #9575cd
