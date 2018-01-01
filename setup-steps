@@ -1,0 +1,12 @@
+create user
+edit sudoers - insults, timeout, wheeel
+reflector - add pacman hook and service
+install trizen
+enable NetworkManager
+enable tlp + tlp-sleep
+disable & mask systemd-rfkill.service systemd-rfkill.socket
+timedatectl set-ntp true
+sign into chrome
+create ssh and add to github
+passwd -l root
+clone & install dotfiles
