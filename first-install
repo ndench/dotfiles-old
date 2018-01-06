@@ -17,7 +17,6 @@ htop
 neovim
 firefox
 tlp
-tp_smapi
 acpi_call
 openssh
 xsel
@@ -52,3 +51,6 @@ virtualbox
 virtuolbox-guest-utils
 nfs-utils
 ansible
+libreoffice-fresh
+xf86-video-intel
+tpacpi-bat
