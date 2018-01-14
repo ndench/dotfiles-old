@@ -73,7 +73,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " Additional syntax highligiting for ansible yaml
-Plugin 'chase/vim-ansible-yaml'
+Plugin 'pearofducks/ansible-vim'
 
 " Nginx sytax
 Plugin 'chr4/nginx.vim'
@@ -98,6 +98,9 @@ Plugin 'docteurklein/vim-symfony'
 
 " Onedark colorscheme
 Plugin 'joshdick/onedark.vim'
+
+" Terraform
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 filetype plugin indent on       " turn filetype, plugin and indent on
@@ -142,6 +145,15 @@ endif
 
 " Don't break at first line
 let g:vdebug_options["break_on_open"] = 0
+
+" }}}}
+
+" Terraform Setup {{{{
+
+let g:terraform_align=1
+
+let g:terraform_fold_sections=1
+
 
 " }}}}
 

@@ -54,3 +54,6 @@ ansible
 libreoffice-fresh
 xf86-video-intel
 tpacpi-bat
+terraform
+aws-clitransmission-gtk
+dnsutils
