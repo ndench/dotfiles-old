@@ -1,5 +1,6 @@
 create user
 edit sudoers - insults, timeout, wheeel
+add user to docker group
 reflector - add pacman hook and service
 install trizen
 enable NetworkManager

@@ -57,3 +57,4 @@ tpacpi-bat
 terraform
 aws-clitransmission-gtk
 dnsutils
+docker
