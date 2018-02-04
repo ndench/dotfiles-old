@@ -48,7 +48,7 @@ pavucontrol
 vagrant
 virtualbox-host-modules-arch
 virtualbox
-virtuolbox-guest-utils
+virtualbox-guest-iso
 nfs-utils
 ansible
 libreoffice-fresh
@@ -58,3 +58,7 @@ terraform
 aws-clitransmission-gtk
 dnsutils
 docker
+time
+pv
+wget
+redshift
