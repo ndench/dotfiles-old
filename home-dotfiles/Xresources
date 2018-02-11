@@ -1,0 +1,65 @@
+#include "dotfiles/base16/base16-xresources/xresources/base16-oceanicnext-256.Xresources"
+
+URxvt*.termName: rxvt-unicode-256color
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! no ugly scrollbar
+URxvt*.scrollBar: false
+
+! scroll in the secondary screen, not the terminal (ie. less)
+URxvt*.secondaryScreen: true
+URxvt*.secondaryScroll: false
+
+URxvt*.font: xft:monospace:size=10
+! tighter character spacing
+URxvt*.letterSpace: -1
+
+
+! Disable the bullshit ctrl+shift mode
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
+! Extensions
+! Remove selection extension to make triple click work properly
+URxvt.perl-ext: default,-selection
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,resize-font
+
+! Make URLs look like URLs, and launch on left click
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+
+! Selecting text and URLs with the keyboard
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
+! Copy paste
+! control+shift+c copy
+URxvt.keysym.C-C: perl:clipboard:copy
+! control+shift+v  paste
+URxvt.keysym.C-V: perl:clipboard:paste
+! control+alt+v / control+alt+shift+v paste
+URxvt.keysym.C-A-V: perl:clipboard:paste_escaped
+
+
+! Turn on bells
+URxvt*urgentOnBell: true
+URxvt*visualBell: false
+
+! Save more lines
+URxvt*saveLines: 65535
+
+! Hide the cursor when keys are pressed
+URxvt*pointerBlank: true
+

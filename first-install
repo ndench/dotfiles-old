@@ -64,3 +64,5 @@ wget
 redshift
 gparted
 dconf-editor
+urxvt
+urxvt-perls

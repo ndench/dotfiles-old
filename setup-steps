@@ -11,3 +11,4 @@ sign into chrome
 create ssh and add to github
 passwd -l root
 clone & install dotfiles
+localectl --no-convert set-x11-keymap us thinkpad dvorak caps:escape

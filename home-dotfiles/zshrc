@@ -13,7 +13,7 @@ setopt NO_NOMATCH
 unsetopt BRACE_CCL
 
 # Set 256 colors
-export TERM=st-256color
+#export TERM=st-256color
 
 # Use local zshrc if available
 if [ -r ~/.zshrc.local ]
@@ -38,5 +38,9 @@ eval $(thefuck --alias)
 
 # Learn about a random man page
 #whatis `ls /usr/share/man/man{1,4,5,6,7,8} | shuf -n 1 | cut -d . -f 1`
+
+# Enable base16-shell
+BASE16_SHELL=$HOME/dotfiles/base16/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 exec fish
