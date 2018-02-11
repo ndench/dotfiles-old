@@ -10,6 +10,9 @@
 #   $2 - directory the symlinks should exist in
 #   $3 - boolean, true if the symlinks should be hidden
 ##############################################################################
+
+git submodule update --init
+
 function createSymlinks {
     for file in $(ls $1); do
         filename=$file;
