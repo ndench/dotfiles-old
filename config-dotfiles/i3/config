@@ -198,3 +198,5 @@ exec --no-startup-id compton -f
 
 # Network manager system tray app
 exec --no-startup-id nm-applet
+
+exec_always --no-startup-id xrdb ~/.Xresources
