@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+SINK=$( pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | head -n 1 )
+VOL=$( pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,' )
+MUTE=$( pactl list sinks | grep '^[[:space:]]Mute:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.*\(yes\|no\).*,\1,' )
+
+case "$MUTE" in
+  yes) MUTE=1;;
+  no) MUTE=0;;
+  *) MUTE=1;;
+esac
+
+
+# Say 'done'
+pactl set-sink-mute @DEFAULT_SINK@ off
+pactl set-sink-volume @DEFAULT_SINK@ 100%
+espeak done > /dev/null 2>&1
+
+# Reset
+pactl set-sink-volume @DEFAULT_SINK@ $VOL%
+pactl set-sink-mute @DEFAULT_SINK@ $MUTE
