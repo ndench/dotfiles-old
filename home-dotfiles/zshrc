@@ -30,7 +30,8 @@ fi
 
 export EDITOR=vim
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export PATH=$PATH:~/bin:$GEM_HOME/bin
+export GOPATH=~/go
+export PATH=$PATH:~/bin:$GEM_HOME/bin:$GOPATH/bin
 fpath=(~/.zsh/completion $fpath)
 
 # Configure thefuck
