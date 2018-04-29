@@ -55,7 +55,8 @@ libreoffice-fresh
 xf86-video-intel
 tpacpi-bat
 terraform
-aws-clitransmission-gtk
+aws-cli
+transmission-gtk
 dnsutils
 docker
 time
