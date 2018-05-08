@@ -199,4 +199,11 @@ exec --no-startup-id compton -f
 # Network manager system tray app
 exec --no-startup-id nm-applet
 
+# Load styling
 exec_always --no-startup-id xrdb ~/.Xresources
+
+# Force some windows to be floating
+for_window [class="Peek"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="Gthumb"] floating enable
