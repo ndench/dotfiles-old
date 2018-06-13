@@ -202,8 +202,12 @@ exec --no-startup-id nm-applet
 # Load styling
 exec_always --no-startup-id xrdb ~/.Xresources
 
+# Hide the mouse after inactivity
+exec --no-startup-id unclutter
+
 # Force some windows to be floating
-for_window [class="Peek"] floating enable
+#for_window [class="Peek"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Gthumb"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
