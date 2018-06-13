@@ -1,6 +1,6 @@
 #include "dotfiles/base16/base16-xresources/xresources/base16-oceanicnext-256.Xresources"
 
-URxvt*.termName: rxvt-unicode-256color
+URxvt*.termName: xterm-256color
 
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
@@ -30,19 +30,19 @@ URxvt.iso14755_52: false
 
 ! Extensions
 ! Remove selection extension to make triple click work properly
-URxvt.perl-ext: default,-selection
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,resize-font
+URxvt.perl-ext: default,matcher,-selection
+URxvt.perl-ext-common: default,keyboard-select,resize-font
 
 ! Make URLs look like URLs, and launch on left click
-URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.keysym.M-u: matcher:select
 
 ! Selecting text and URLs with the keyboard
-URxvt.url-select.underline: true
-URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.keyboard-select.clipboard: true
 
 ! Copy paste
 ! control+shift+c copy
@@ -62,4 +62,3 @@ URxvt*saveLines: 65535
 
 ! Hide the cursor when keys are pressed
 URxvt*pointerBlank: true
-

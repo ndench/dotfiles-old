@@ -38,11 +38,16 @@ mkdir -p $olddir
 moveFiles $home_dotfiles $HOME $olddir true
 moveFiles $config_dotfiles $HOME/.config $olddir false
 
-# Clone in vundle
+# Clone in vundle for vim
 vundle_location="$home_dotfiles/vim/bundle/Vundle.vim"
 if [ ! -d $vundle_location ]
 then
     git clone https://github.com/gmarik/Vundle.vim.git $vundle_location
 fi
+
+# Insteall vim-plug for neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 
 source update.sh --vim

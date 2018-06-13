@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/nathan/git/sunfish'
+let g:netrw_dirhist_2='/home/nathan'
+let g:netrw_dirhist_3='/home/nathan/git/daysailer'
+let g:netrw_dirhist_4='/home/nathan/git/ansible_roles/ansible-role-xdebug'
