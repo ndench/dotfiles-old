@@ -13,21 +13,20 @@
     cob = checkout -b
     br = branch
     ci = commit
-    cm = commit -m
+    cm = commit --message
     ca = commit --amend
     can = commit --amend --no-edit
     a = add
     wd = diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
     d = diff
-    s = status -sb
-    l = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
-    lb = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%an]" --decorate master..
-    lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
-    #lp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort | column -s* -t
-    lpp = ! git log --pretty=format:"%Cblue[%an]*\\ %Creset%s" --decorate prod..master | sort
-    lp = ! git log --pretty=format:"[%an]*\\ %s" --decorate prod..master | sort | column -s* -t
-
+    s = status --short --branch
+    l = log --pretty=tformat:'%C(green)%h %Creset%s%Cblue [%an %ad]' --date=relative --decorate
+    ll = log --pretty=tformat:'%C(green)%h%Cred%d %Creset%s%Cblue [%an %ad]' --date=relative --decorate --numstat
+    lb = log --pretty=tformat:'%C(green)%h %Creset%s%Cblue [%an %ad]' --date=relative --decorate master...
+    lg = log --graph --date=relative --pretty=tformat:'%Cgreen%h%Creset -%C(auto)%d%Creset %s %C(blue)[%an %ad]%Creset' --all
+    pr = diff --shortstat master...
+    purge = "!git branch -vv | grep \\:\\ gone | grep -v \\* | cut -c 3- | cut -d\\  -f 1 | grep -v master"
+    purgef = "!git purge | xargs -n 1 git branch -D"
 [diff]
     compactionHeuristic = true
     tool = icdiff

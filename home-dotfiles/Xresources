@@ -18,7 +18,7 @@ URxvt*.scrollBar: false
 URxvt*.secondaryScreen: true
 URxvt*.secondaryScroll: false
 
-URxvt*.font: xft:monospace:size=10
+URxvt*.font: xft:Hack Nerd Font:size=10
 ! tighter character spacing
 URxvt*.letterSpace: -1
 
@@ -36,26 +36,18 @@ URxvt.perl-ext-common: default,keyboard-select,resize-font
 ! Make URLs look like URLs, and launch on left click
 URxvt.url-launcher: xdg-open
 URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
-URxvt.keysym.M-u: matcher:select
+URxvt.matcher.rend.0: Uline Normal fg5
+URxvt.keysym.M-u: perl:matcher:select
 
 ! Selecting text and URLs with the keyboard
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.keyboard-select.clipboard: true
 
-! Copy paste
-! control+shift+c copy
-URxvt.keysym.C-C: perl:clipboard:copy
-! control+shift+v  paste
-URxvt.keysym.C-V: perl:clipboard:paste
-! control+alt+v / control+alt+shift+v paste
-URxvt.keysym.C-A-V: perl:clipboard:paste_escaped
-
-
-! Turn on bells
+! Turn off bells
 URxvt*urgentOnBell: true
 URxvt*visualBell: false
+
 
 ! Save more lines
 URxvt*saveLines: 65535

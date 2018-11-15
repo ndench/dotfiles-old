@@ -1,0 +1,1 @@
+/home/nathan/.config/fisherman/fnm/functions/fnm.fish

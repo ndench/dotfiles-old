@@ -1,4 +1,5 @@
 alias packer=packer-io
+alias tf=terraform
 
 # Base16 Shell
 if status --is-interactive

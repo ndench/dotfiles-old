@@ -175,6 +175,21 @@ set lazyredraw        " redraw only when we need to
 "set foldenable        " enable folding
 "set foldmethod=indent " fold based on indent level
 set mouse=a           " enable the mouse
+set autoread          " automaticaly read file changes
+set visualbell        " use a visual bell instead of an audible one
+set t_vb=             " disable bell
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " }}}}
 
@@ -321,10 +336,16 @@ endfunction
 " Auto Commands {{{{
 
 " markdown filetype
-autocmd BufNewFIle,BufRead *.md set syntax=markdown
+autocmd BufNewFIle,BufRead *.md set syntax=markdown textwidth=100
 
 " save on focus lost ignoring errors
 au FocusLost * silent! wa
+
+" reread file when focousing
+autocmd FocusGained * checktime
+
+" reset file syntax
+autocmd BufEnter * :syntax sync minlines=20
 
 " return to last edit position when opening files
 autocmd BufReadPost *
