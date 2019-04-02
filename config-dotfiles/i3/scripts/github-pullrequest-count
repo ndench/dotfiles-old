@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+if [[ "$#" -eq "1" ]]; then
+  # If any params are passed in, open github
+  # Don't let chrome output go into the status bar
+  google-chrome-beta https://github.com/pulls/review-requested > /dev/null
+fi
+
+pr_count=$(hub api graphql -f q='is:open is:pr review-requested:ndench' -f query='
+ query ($q: String!, $per_page: Int = 10) {
+   search(query: $q, type: ISSUE, first: $per_page) {
+      issueCount
+   }
+ }' | jq '.data.search.issueCount')
+
+# All script output goes into the status bar
+echo $pr_count
+
+if [[ "$pr_count" -gt "2" ]]; then
+  # Set block to urgent in the status bar
+  exit 33
+fi
+
+exit 0

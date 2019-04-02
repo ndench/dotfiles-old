@@ -22,7 +22,7 @@
     s = status --short --branch
     l = log --pretty=tformat:'%C(green)%h %Creset%s%Cblue [%an %ad]' --date=relative --decorate
     ll = log --pretty=tformat:'%C(green)%h%Cred%d %Creset%s%Cblue [%an %ad]' --date=relative --decorate --numstat
-    lb = log --pretty=tformat:'%C(green)%h %Creset%s%Cblue [%an %ad]' --date=relative --decorate master...
+    lb = log --pretty=tformat:'%C(green)%h %Creset%s%Cblue [%an %ad]' --date=relative --decorate master..
     lg = log --graph --date=relative --pretty=tformat:'%Cgreen%h%Creset -%C(auto)%d%Creset %s %C(blue)[%an %ad]%Creset' --all
     pr = diff --shortstat master...
     purge = "!git branch -vv | grep \\:\\ gone | grep -v \\* | cut -c 3- | cut -d\\  -f 1 | grep -v master"
