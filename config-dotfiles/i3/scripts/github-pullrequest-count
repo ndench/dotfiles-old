@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ "$#" -eq "1" ]]; then
-  # If any params are passed in, open github
+if [[ "$#" -eq "1" && "$1" -eq "1" ]]; then
+  # The block has been clicked by the left mouse button
   # Don't let chrome output go into the status bar
   google-chrome-beta https://github.com/pulls/review-requested > /dev/null
 fi
