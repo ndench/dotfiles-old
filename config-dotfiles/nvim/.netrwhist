@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/nathan/git/hyraiq/daysailer'
-let g:netrw_dirhist_2='/home/nathan/git/hyraiq/daysailer/packer'
-let g:netrw_dirhist_3='/home/nathan/git/hyraiq/daysailer'
-let g:netrw_dirhist_4='/home/nathan/git/hyraiq/daysailer/terraform'
-let g:netrw_dirhist_5='/home/nathan/git/hyraiq/daysailer/terraform/modules'
-let g:netrw_dirhist_6='/home/nathan/git/hyraiq/daysailer/terraform/modules/sunfish-web'
+let g:netrw_dirhist_cnt =0

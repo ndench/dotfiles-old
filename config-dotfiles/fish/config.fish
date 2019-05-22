@@ -1,4 +1,5 @@
 alias tf=terraform
+alias myip="curl --silent ifconfig.co | xsel -b"
 
 # Base16 Shell
 if status --is-interactive
